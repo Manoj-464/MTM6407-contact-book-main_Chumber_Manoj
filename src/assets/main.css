@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  width: min(100% - 2rem, 30rem);
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+body, input {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 2rem;
+  letter-spacing: 0.02rem;
+}
+
+h1 {
+  margin: 1rem 0 2rem 0;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+body, html {
+  overflow-x: hidden;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  padding-top: 1rem;
+  border-top: 1px solid #00ffbb;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+header, main, footer {
+  margin: 1rem 0;
+}
+
+code {
+  font-family: monospace;
+  padding: 0 0.2rem;
+  background-color: #e3e3e3;
+}
+
+input {
+  border: 1px solid #e90000;
+  padding: 0.25rem 0.5rem;
+  min-width: 15rem;
+}
+
+select, button {
+  max-width: 15rem;
+}
+
+button, select {
+  padding: 0.5rem 0.5rem;
+  color: #707070 !important;
+  border-radius: 0.25rem;
+  border: 1px solid #e3e3e3;
+  background-color: white;
+  color: #969696;
+  transition: border ease-out 0.3s;
+}
+button:hover, button:focus, select:hover, select:focus {
+  transition: border 0.1s;
+  color: inherit;
+}
+button:hover:hover, button:hover:focus, button:focus:hover, button:focus:focus, select:hover:hover, select:hover:focus, select:focus:hover, select:focus:focus {
+  border-color: #005096;
+  color: white;
+}
+button:active, select:active {
+  transition: border 0.1s;
+  color: inherit;
+}
+button:active:hover, button:active:focus, select:active:hover, select:active:focus {
+  border-color: #005096;
+  color: white;
+}
+
+.contacts {
+  margin: 2rem 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact {
+  border: 1px solid #00ffbb;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.contact .name {
+  display: flex;
+  align-items: center;
+}
+.contact .buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.contact .buttons i {
+  font-size: 1.5rem;
+}
+.contact .buttons .edit, .contact .buttons .delete {
+  width: 2.5rem !important;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #000000;
+  background-color: rgb(0, 30, 198);
+  color: #ff0000;
+  transition: border ease-out 0.3s;
+}
+.contact .buttons .edit:hover, .contact .buttons .edit:focus, .contact .buttons .delete:hover, .contact .buttons .delete:focus {
+  transition: border 0.1s;
+  color: inherit;
+}
+.contact .buttons .edit:hover.edit:hover, .contact .buttons .edit:hover.edit:focus, .contact .buttons .edit:focus.edit:hover, .contact .buttons .edit:focus.edit:focus, .contact .buttons .delete:hover.edit:hover, .contact .buttons .delete:hover.edit:focus, .contact .buttons .delete:focus.edit:hover, .contact .buttons .delete:focus.edit:focus {
+  border-color: #005096;
+  background-color: #005096;
+  color: white;
+}
+.contact .buttons .edit:hover.delete:hover, .contact .buttons .edit:hover.delete:focus, .contact .buttons .edit:focus.delete:hover, .contact .buttons .edit:focus.delete:focus, .contact .buttons .delete:hover.delete:hover, .contact .buttons .delete:hover.delete:focus, .contact .buttons .delete:focus.delete:hover, .contact .buttons .delete:focus.delete:focus {
+  border-color: red;
+  background-color: red;
+  color: rgb(255, 0, 0);
+}
+.contact .buttons .edit:hover.edit:active, .contact .buttons .edit:hover.delete:active, .contact .buttons .edit:focus.edit:active, .contact .buttons .edit:focus.delete:active, .contact .buttons .delete:hover.edit:active, .contact .buttons .delete:hover.delete:active, .contact .buttons .delete:focus.edit:active, .contact .buttons .delete:focus.delete:active {
+  border-color: black;
+  background-color: black;
+  color: white;
+}
+.contact .buttons .edit:active, .contact .buttons .delete:active {
+  transition: border 0.1s;
+  color: inherit;
+}
+.contact .buttons .edit:active.edit:hover, .contact .buttons .edit:active.edit:focus, .contact .buttons .delete:active.edit:hover, .contact .buttons .delete:active.edit:focus {
+  border-color: #005096;
+  background-color: #005096;
+  color: white;
+}
+.contact .buttons .edit:active.delete:hover, .contact .buttons .edit:active.delete:focus, .contact .buttons .delete:active.delete:hover, .contact .buttons .delete:active.delete:focus {
+  border-color: red;
+  background-color: red;
+  color: white;
+}
+.contact .buttons .edit:active.edit:active, .contact .buttons .edit:active.delete:active, .contact .buttons .delete:active.edit:active, .contact .buttons .delete:active.delete:active {
+  border-color: black;
+  background-color: black;
+  color: white;
+}
+
+#new-contact, #edit-contact {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */

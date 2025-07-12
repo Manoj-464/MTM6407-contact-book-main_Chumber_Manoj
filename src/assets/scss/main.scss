@@ -1,0 +1,145 @@
+@use "reset";
+@use "utilities";
+@use "text";
+
+$color-gold: #ffb900;
+$color-blue: #005096;
+$color-grey: #969696;
+
+body, html {
+  overflow-x: hidden;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  padding-top: 1rem;
+  border-top: 1px solid lighten($color-grey, 30%);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+header, main, footer {
+  margin: 1.00rem 0;
+}
+
+code {
+  font-family: monospace;
+  padding: 0 0.2rem;
+  background-color: lighten($color-grey, 30%);
+}
+
+@mixin button-style {
+  border-radius: 0.25rem;
+  border: 1px solid lighten($color-grey, 30%);
+  background-color: white;
+  color: lighten($color-grey, 0%);
+  transition: border ease-out 0.3s;
+
+  &:hover, &:focus {
+    transition: border 0.1s;
+    @content;
+  }
+
+  &:active {
+    transition: border 0.1s;
+    @content;
+  }
+}
+
+input {
+  border: 1px solid lighten($color-grey, 30%);
+  padding: 0.25rem 0.5rem;
+  min-width: 15rem;
+}
+
+select, button {
+  max-width: 15rem;
+}
+
+button, select {
+  padding: 0.5rem 0.5rem;
+  color: darken($color-grey, 15%) !important;
+
+  @include button-style {
+    color: inherit;
+
+    &:hover, &:focus {
+      border-color: $color-blue;
+      color: white;
+    }
+  }
+}
+
+.contacts {
+  margin: 2.00rem 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact {
+  border: 1px solid lighten($color-grey, 30%);
+  border-radius: 0.5rem;
+  padding: 0.50rem 0.50rem 0.50rem 1.00rem;
+  display: flex;
+  justify-content: space-between;
+
+
+  .name {
+    display: flex;
+    align-items: center;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.50rem;
+
+    i {
+      font-size: 1.50rem;
+    }
+    
+    .edit, .delete {
+      width: 2.5rem !important;
+      height: 2.5rem;
+
+      @include button-style {
+        color: inherit;
+    
+        &.edit:hover, &.edit:focus {
+          border-color: $color-blue;
+          background-color: $color-blue;
+          color: white;
+        }
+    
+        &.delete:hover, &.delete:focus {
+          border-color: red;
+          background-color: red;
+          color: white;
+        }
+
+        &.edit:active, &.delete:active {
+          border-color: black;
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+#new-contact, #edit-contact {
+  margin-top: 2.00rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.00rem;
+}

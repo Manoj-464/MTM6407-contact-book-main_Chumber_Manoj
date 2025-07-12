@@ -1,0 +1,28 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "nameFirst": "Manoj",
+      "nameLast": "chumber",
+      "email": "chumber@algonquinlive.com",
+      "phone": "(613) 890-3963",
+      "route": "/contact/1"
+    },
+    {
+      "id": 2,
+      "nameFirst": "Nvin",
+      "nameLast": "Kumar",
+      "email": "nk@darkplace.com",
+      "phone": "(123) 246-1112",
+      "route": "/contact/2"
+    },
+    {
+      "id": 3,
+      "nameFirst": "Gautam",
+      "nameLast": "attri",
+      "email": "Gautam@roomofhell.com",
+      "phone": "(666) 999-1408",
+      "route": "/contact/3"
+    }
+  ]
+}
